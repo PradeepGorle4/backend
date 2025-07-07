@@ -1,8 +1,8 @@
 # FROM node:20
 FROM node:20-alpine3.21 AS builder
 WORKDIR /opt/backend
-COPY /code/package.json .
-COPY /code/*.js ./
+COPY package.json .
+COPY *.js ./
 RUN npm install
 
 # The below is the cmd for creating user and group in alpine
